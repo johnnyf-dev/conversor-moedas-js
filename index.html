@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Comic+Relief:wght@400;700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    
+    
+    <title>Conversor de Moedas</title>
+</head>
+
+<body>
+    <img class="logo-img" src="./assets/logo.gif" alt="Logo-da-empresa">
+    <main><!-- seletores e conversao -->
+        
+            <label> <!-- valor inicial -->
+                Converter <b> de: </b>
+                <select id="tipos-de-moedas-primeiro-select">
+                    <option value="real">R$ Real Brasileiro</option>
+                    <option value="dolar">US$ Dólar Americano</option>
+                    <option value="euro">€$ Euro</option>
+                </select>
+
+            </label>
+
+
+            <label> <!-- selecionar para qual moeda mudar -->
+                Converter <b> para: </b>
+                <select id="tipos-de-moedas-segundo-select">
+                    <option value="real">R$ Real Brasileiro</option>
+                    <option value="dolar" selected>US$ Dólar Americano</option>
+                    <option value="euro">€$ Euro</option>
+                </select>
+
+            </label>
+
+            <label> <!-- area de saida dos calculos -->
+                Valor :
+                <input id="valor-entrada" type="number" placeholder="R$ 10.000,00">
+
+            </label>
+
+            <button id="button-converter">
+                Converter
+
+
+            </button>
+        
+
+        <section> <!-- resultado da conversao -->
+            <div class="currency-box"> <!-- primeira imagem -->
+                <img id="bandeira-select1" src="./assets/real.png" alt="moeda real">
+                <!-- <p class="currency">Real</p> -->
+                 <p id="nome-moeda-select1">Real</p>
+                
+                <p id="valor-digitado-tela">R$ 0,00</p>
+            
+            </div>
+
+            <div class="arrow-img"> <!-- seta -->
+                <img src="./assets/arrow.png" alt="seta">
+            </div>
+
+            <div class="currency-box"> <!-- ultima imagem -->
+                <img id="bandeira-select2" src="./assets/dolar.png" alt="Moeda">
+                
+                <p id="nome-moeda-select2">Dólar</p>
+                <p id="valor-resultado">U$ 0.00</p>
+            </div>
+
+        </section>
+
+
+    </main>
+<script src="./scripts.js"></script>
+</body>
+
+</html>
